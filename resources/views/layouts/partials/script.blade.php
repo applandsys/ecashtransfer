@@ -1,0 +1,11 @@
+<script src="{{asset('front_template/assets/js/jquery.min.js')}}"></script>
+      <script src="{{asset('front_template/assets/js/bootstrap.bundle.min.js')}}"></script>
+      <script src="{{asset('front_template/assets/js/form-validator.min.js')}}"></script>
+      <script src="{{asset('front_template/assets/js/contact-form-script.js')}}"></script>
+      <script src="{{asset('front_template/assets/js/aos.js')}}"></script>
+      <script src="{{asset('front_template/assets/js/owl.carousel.min.js')}}"></script>
+      <script src="{{asset('front_template/assets/js/odometer.min.js')}}"></script>
+      <script src="{{asset('front_template/assets/js/fancybox.js')}}"></script>
+      <script src="{{asset('front_template/assets/js/jquery.appear.js')}}"></script>
+      <script src="{{asset('front_template/assets/js/tweenmax.min.js')}}"></script>
+      <script src="{{asset('front_template/assets/js/main.js')}}"></script>
