@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('address')->nullable();
             $table->string('photo')->nullable();
             $table->string('nomini_name')->nullable();
+            $table->string('nomini_photo')->nullable();
             $table->string('nomini_phone')->nullable();
             $table->string('nomini_dob')->nullable(); // dorkar nai
             $table->string('nomini_address')->nullable();

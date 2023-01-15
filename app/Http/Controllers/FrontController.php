@@ -46,36 +46,41 @@ class FrontController extends Controller
                 ];
               // redirect
             }
-            return redirect('/')->with('success', 'Registration Successful');
+            return redirect('/loginaccount')->with('success', 'Registration Successful');
         }else{
             return view('front.openaccount');
         }
-           
-            
+               
     }
 
-    public function login(Request $request)
+    public function loginaccount(Request $request)
     {
-        $request->validate([
-            'email' => 'required|string|email',
-            'password'=> 'required|min:8',
-        ]);
-   
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            // return redirect()->route('frontend.home')
-            //             ->with('success','You have Successfully loggedin');
-            $response = [
-                'success' => 200,
-                'data' => Auth::user(),
-                'is_login' => true,
-            ];
-            return response()->json($response, 202);
+
+        if ($request->isMethod('post')) {
+            $request->validate([
+                'email' => 'required|string|email',
+                'password'=> 'required|min:8',
+            ]);
+       
+            $credentials = $request->only('email', 'password');
+            
+            if (Auth::attempt($credentials)) {
+                // return redirect()->route('frontend.home')
+                //             ->with('success','You have Successfully loggedin');
+                $response = [
+                    'success' => 200,
+                    'data' => Auth::user(),
+                    'is_login' => true,
+                ];
+                return redirect('/account/dashboard')->with('success', 'Login Successful');
+            }
+            
+        }else{
+            return view('front.loginaccount');
         }
-        
-  
-        //return redirect("/")->with('errors','Oppes! You have entered invalid credentials');
+       
     }
+
     public function logout(Request $request)
     {
         Session::flush();

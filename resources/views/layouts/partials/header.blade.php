@@ -44,41 +44,70 @@
             </div>
             <div class="header-bottom">
                <div class="container">
+  
                   <nav class="navbar navbar-expand-md navbar-light">
                      <a class="navbar-brand" href="index.html">
-                     <img class="logo-light" src="{{asset('front_template/assets/img/logo.png')}}" alt="logo">
-                     <img class="logo-dark" src="{{asset('front_template/assets/img/logo-white.png')}}" alt="logo">
+                     <img class="logo-light" src="{{asset('front_template/assets/img/logo.png')}}" alt="logo" width="250px">
+                     <img class="logo-dark" src="{{asset('front_template/assets/img/logo.png')}}" alt="logo" width="250px">
                      </a>
                      <div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
                         <div class="menu-close xl-none">
                            <a href="javascript:void(0)"> <i class="ri-close-line"></i></a>
                         </div>
                         <ul class="navbar-nav ms-auto">
+                        @guest
                            <li class="nav-item  has-dropdown">
                               <a href="#" class="nav-link active">
                               Home
                               </a> 
                            </li>
                            <li class="nav-item">
-                              <a href="about.html" class="nav-link">
+                              <a href="#" class="nav-link">
                               About Us
                               </a>
                            </li>
           
                            <li class="nav-item">
-                              <a href="contact.html" class="nav-link">Contact Us</a>
+                              <a href="#" class="nav-link">Contact Us</a>
                            </li>
+
+                           <li class="nav-item">
+                           <a href="{{route('front.loginaccount')}}" class="nav-link">Login</a>
+                           </li>
+
                            <li class="nav-item xl-none">
-                              <a href="{{route('register')}}" class="btn style1">Open Account</a>
-                           </li>
-                        </ul>
-                        <div class="others-options  lg-none">
-                           <div class="header-btn lg-none">
                               <a href="{{route('front.openaccount')}}" class="btn style1">Open Account</a>
+                           </li>
+                           @else
+
+                           <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+                            </li>
+                           @endguest
+                        </ul>
+                        @guest
+                           <div class="others-options  lg-none">
+                              <div class="header-btn lg-none">
+                                 <a href="{{route('front.openaccount')}}" class="btn style1">Open Account</a>
+                              </div>
                            </div>
+                        @else
+                        <div class="others-options  lg-none">
+                              <a class="btn btn-danger" href="{{ route('logout') }}"
+                                 onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                              </a>
+                              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                              </form>
                         </div>
+                        @endguest
                      </div>
                   </nav>
+             
                   <div class="mobile-bar-wrap">
                      <div class="mobile-sidebar">
                         <i class="ri-menu-4-line"></i>

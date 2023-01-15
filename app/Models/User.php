@@ -29,6 +29,7 @@ class User extends Authenticatable
         'address',
         'photo',
         'nomini_name',
+        'nomini_photo',
         'nomini_phone',
         'nomini_dob',
         'nomini_nid',
