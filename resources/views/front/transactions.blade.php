@@ -10,10 +10,10 @@
 			<div class="row align-items-center">
 				<div class="col-lg-7 col-md-8 col-sm-8">
 					<div class="breadcrumb-title">
-						<h2>My Account</h2>
+						<h2>Mone  Transfer</h2>
 						<ul class="breadcrumb-menu list-style">
-							<li><a href="index.html">Home </a></li>
-							<li>My Account</li>
+							<li><a href="index.html">My Account </a></li>
+							<li>Money Transfer</li>
 						</ul>
 					</div>
 				</div>
@@ -27,8 +27,6 @@
 			</div>
 		</div>
 	</div>
-
-
 	<section class="ptb-100">
 		<div class="container">
 			<div class="row">
@@ -40,46 +38,42 @@
 				<div class="col-lg-9">
 					<div class="card" style="">
 						<div class="card-body">
-							<div style="display: flex; justify-content: space-between">
-								<div> <!--left-->
-									<div class="card-title" style="color: yellowgreen;
-									font-family: unset;
-									font-size: 1.4rem;">
-										Welcome   {{ Auth::user()->name }} !
+							<section class="account-wrap ptb-10">
+								<div class="container">
+									<div class="section-title style1 text-center mb-40">
+										<span>Transaction History</span>
+										<h2>All Transactions</h2>
 									</div>
-									<div class="card-text" style=" color: #ccc;
-																	font-family: unset;
-																}">Personal Account
-									</div>
-									<div> AC # 254854785 </div>
-									<br/>
-									<div>
-										<a href="" class="" style=" 
-																padding: 10px;
-																border-radius: 7px;
-																background: #dc3545;
-																color: #fff;"> Transfer Money </a>
-									</div>
+									<div class="row">
+                                        <div class="col-md-12">
+										<table class="table">
+											<thead>
+												<tr>
+													<th scope="col">#</th>
+													<th scope="col">Date</th>
+													<th scope="col">Sender</th>
+													<th scope="col">Receiver</th>
+													<th scope="col">Type</th>
+													<th scope="col">Amount</th>
+													<th scope="col">Million</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+												<th scope="row">1</th>
+												<td>January-17-2023</td>
+												<td>Mr. Ebrahimovich Gomez</td>
+												<td>Mr. Sri Biplob Chanda Das</td>
+												<td>Money Received</td>
+												<td>US$ 481164.60 </td>
+												<td>US$ 0.4811646 </td>
+												</tr>
+											</tbody>
+											</table>
+										</div>
+									</div>				
 								</div>
-								<div style=""> <!--right-->
-									<div class="text-center">
-										<img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" style="width: 150px;" alt="Avatar" />
-									</div>	
-									<div class="text-center">
-									Balance
-										<h6 style="	font-family: unset;
-												color: #036A1F;
-												font-size: 22px;">US$ 0.6 Million
-										</h6>
-									</div>						
-								</div>		
-							</div>	
-							
-							<div class="row">
-								<div class="col-lg-12">
-									KYC Vefirification Status: <span class="badge bg-success"> Verified</span>
-								</div>
-							</div>
+							</section>
 						</div>
 					</div>
 				</div>

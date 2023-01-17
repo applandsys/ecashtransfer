@@ -8,7 +8,7 @@
                      <div class="col-lg-8 col-md-12">
                         <div class="header-top-left">
                            <ul class="contact-info list-style">
-                              <li><i class="flaticon-call"></i> <a href="tel:02459271449">(+024) 592 71 449</a></li>
+                              <li><i class="flaticon-call"></i> <a href="tel:02459271449">(+1) 212 202 8468</a></li>
                               <li><i class="flaticon-email-1"></i> <a href="mail:suport@ecashtransfer.com"><span class="__cf_email__" data-cfemail="d4bcb1b8b8bb94a6b5acb5fab7bbb9">support@ecashtransfer.com</span></a></li>
                               <li>
                                  <i class="flaticon-pin"></i>
@@ -18,6 +18,7 @@
                         </div>
                      </div>
                      <div class="col-lg-4 col-md-12">
+                        <!--
                         <div class="header-top-right">
                            <ul class="header-top-menu list-style">
                               <li><a href="contact.html">Support</a></li>
@@ -38,6 +39,7 @@
                               </div>
                            </div>
                         </div>
+                        -->
                      </div>
                   </div>
                </div>
@@ -57,18 +59,18 @@
                         <ul class="navbar-nav ms-auto">
                         @guest
                            <li class="nav-item  has-dropdown">
-                              <a href="#" class="nav-link active">
+                              <a href="{{route('front.home')}}" class="nav-link active">
                               Home
                               </a> 
                            </li>
                            <li class="nav-item">
-                              <a href="#" class="nav-link">
+                              <a href="{{route('front.about')}}" class="nav-link">
                               About Us
                               </a>
                            </li>
           
                            <li class="nav-item">
-                              <a href="#" class="nav-link">Contact Us</a>
+                              <a href="{{route('front.contact')}}" class="nav-link">Contact Us</a>
                            </li>
 
                            <li class="nav-item">

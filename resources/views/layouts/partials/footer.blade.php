@@ -3,7 +3,8 @@
                <img src="{{asset('front_template/assets/img/footer-shape-1.png')}}" alt="Image" class="footer-shape-one">
                <img src="{{asset('front_template/assets/img/footer-shape-2.png')}}" alt="Image" class="footer-shape-two">
                <div class="row pt-100 pb-75">
-                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                  <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6"> -->
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">    
                      <div class="footer-widget">
                         <a href="index.html" class="footer-logo">
                         <img src="{{asset('front_template/assets/img/logo-white.png')}}" alt="Image">
@@ -12,6 +13,7 @@
                            On the other hand, we denounce whteous indig nation and dislike men wh beguiled moraized er hand consec teturus adipis iscing elit eiusmod tempordunt labore dolore magna aliqua consector tetur adip iscing.
                         </p>
                         <div class="social-link">
+                           <!--
                            <ul class="social-profile list-style style1">
                               <li>
                                  <a target="_blank" href="https://facebook.com/">
@@ -34,9 +36,11 @@
                                  </a>
                               </li>
                            </ul>
+                           -->
                         </div>
                      </div>
                   </div>
+                  <!--
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <div class="footer-widget">
                         <h3 class="footer-widget-title">Our Company</h3>
@@ -133,9 +137,11 @@
                         </form>
                      </div>
                   </div>
+
+-->
                </div>
             </div>
             <div class="copyright-text">
-               <p> <i class="ri-copyright-line"></i>2021 Raxa. All Rights Reserved By <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+               <p> <i class="ri-copyright-line"></i>2023 Ecash Transfer LLC. All Rights Reserved By <a href="https://ecashtransfers.com/" target="_blank">EcashTransfers</a></p>
             </div>
          </footer>

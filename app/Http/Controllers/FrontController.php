@@ -81,6 +81,40 @@ class FrontController extends Controller
        
     }
 
+
+    public function contact(Request $request)
+    {
+
+        if ($request->isMethod('post')) {
+            $request->validate([
+                'email' => 'required|string|email',
+                'password'=> 'required|min:8',
+            ]);
+       
+            $credentials = $request->only('email', 'password');
+            
+            if (Auth::attempt($credentials)) {
+                // return redirect()->route('frontend.home')
+                //             ->with('success','You have Successfully loggedin');
+                $response = [
+                    'success' => 200,
+                    'data' => Auth::user(),
+                    'is_login' => true,
+                ];
+                return redirect('/contact')->with('success', 'Message Successfully Sent.');
+            }
+            
+        }else{
+            return view('front.contact');
+        }
+       
+    }
+
+    public function about(Request $request)
+    {
+        return view('front.about');
+    }
+
     public function logout(Request $request)
     {
         Session::flush();
